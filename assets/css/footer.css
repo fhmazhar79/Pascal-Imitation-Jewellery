@@ -1,0 +1,134 @@
+#newsletter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url(../img/footer/new.png);
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: #444444;
+    height: 20vh;
+  }
+  
+  #newsletter h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+  }
+  #newsletter p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #c3c3c3;
+
+  }
+  #newsletter p span {
+    color: #ffbd27;
+  }
+  #newsletter input {
+    height: 3.125rem;
+    padding: 0 1.25rem;
+    width: 80%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  #newsletter button {
+
+    padding-left: 10px 30px;
+    height: 3.125rem;
+    width: 100px;
+    color: #fff;
+    background-color: #b99b7b;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+  }
+  #newsletter button:hover {
+    background-color: #b38c62;
+  }
+  #newsletter .form {
+    display: flex;
+
+  }
+  footer {
+    background-image: url(../img/footer/footer-back.png);
+    
+  }
+ 
+  
+
+  footer .logo {
+    margin-bottom: 20px;
+  }
+  
+  footer h4 {
+    font-size: 20px;
+    padding-bottom: 10px;
+    font-weight: 700;
+  }
+  
+  footer p {
+    font-weight: 600;
+    font-size: 15px;
+    margin: 0 0 8px 0;
+  }
+  
+  footer a {
+    text-decoration: none;
+    color: #222;
+    font-size: 13px;
+    margin-bottom: 4px;
+    margin-left: 6px;
+    transition: transform 1s ease;
+  }
+  
+  footer .follow {
+    margin-top: 20px;
+  }
+  
+  footer .follow i {
+    color: #686868;
+    padding-right: 4px;
+    cursor: pointer;
+    
+  }
+  
+  footer .install .list img {
+    border: 1px solid #686868;
+    border-radius: 6px;
+  }
+  
+  footer .install img {
+    margin: 10px 0 15px 0;
+  }
+  
+  footer .follow i:hover {
+    /* padding-right: 2rem; */
+    color: #b99b7b;
+    
+  }
+  footer a:hover {
+    padding-right: 6rem;
+    color: #cd9c63;
+    font-weight: 600;
+
+  }
+  .translate li{
+    list-style: none;
+    transition: transform 1s ease;
+}
+  .translate li:hover{
+    transform: translateX(10px);
+}
+
+  footer .copyright {
+    width: 100%;
+    text-align: center;
+  }

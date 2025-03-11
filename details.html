@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/detail.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <script src="assets/js/dataOriginalBrecelates.js"></script>
+    <script src="assets/js/dataSemiBrecelates.js"></script>
+      <style>
+        .main {
+            padding: 20px;
+        }
+        .img-area {
+            text-align: center;
+        }
+        .thumbnail {
+            cursor: pointer;
+            margin: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .thumbnail:hover {
+            border-color: #007bff;
+        }
+        .content-area {
+            padding: 20px;
+        }
+        h1, h2 {
+            margin-bottom: 15px;
+        }
+        @media (max-width: 768px) {
+            .img-area img {
+                width: 100%;
+                height: auto;
+            }
+            .thumbnail {
+                width: 80px;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <script>
+            // Sample data for demonstration
+
+
+            // Get the product ID from the URL
+            var urlparms = new URLSearchParams(window.location.search);
+            var getid = urlparms.get('id');
+
+            // Find the product card based on the ID
+            var card = cards.find(function(c) {
+                return c.id == getid;
+            });
+
+            // Display the product details
+            if (card) {
+                document.write(`
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 img-area">
+                                <img src="assets/img/detail/${card.img}" id="mainImage" class="img-fluid" alt="${card.name}">
+                                <div class="mt-3">
+                                    <img src="assets/img/detail/${card.img1}" width="100" class="thumbnail" alt="Thumbnail 1">
+                                    <img src="assets/img/detail/${card.img2}" width="100" class="thumbnail" alt="Thumbnail 2">
+                                    <img src="assets/img/detail/${card.img3}" width="100" class="thumbnail" alt="Thumbnail 3">
+                                </div>
+                            </div>
+                            <div class="col-md-6 content-area">
+                                <h1>${card.name}</h1>
+                                <h2>Description: ${card.discription}</h2>
+                                <h2>Price: ${card.price}</h2>
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <label class="mb-2">Size</label>
+                                        <select class="form-select border border-secondary" style="height: 35px;">
+                                            <option>Small</option>
+                                            <option>Medium</option>
+                                            <option>Large</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="mb-2 d-block">Quantity</label>
+                                        <div class="input-group mb-3" style="width: 170px;">
+                                            <button class="btn btn-white border border-secondary px-3" type="button" id="button-addon1" data-mdb-ripple-color="dark">
+                                                <i class="fas fa-minus"></i>
+                                            </button>
+                                            <input type="text" class="form-control text-center border border-secondary" placeholder="1" aria-label="Quantity" aria-describedby="button-addon1" />
+                                            <button class="btn btn-white border border-secondary px-3" type="button" id="button-addon2" data-mdb-ripple-color="dark">
+                                                <i class="fas fa-plus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn-warning shadow-0"> Buy now </a>
+                                <a href="#" class="btn btn-primary shadow-0"> <i class="me-1 fa fa-shopping-basket"></i> Add to cart </a>
+                                <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Save </a>
+                            </div>
+                        </div>
+                    </div>
+                `);
+            } else {
+                document.write("<h1>Card Not Found!</h1>");
+            }
+        </script>
+        <script>
+            // Thumbnail click functionality
+            document.addEventListener("DOMContentLoaded", function() {
+                var mainImage = document.getElementById("mainImage");
+                var thumbnails = document.querySelectorAll(".thumbnail");
+
+                thumbnails.forEach(thumbnail => {
+                    thumbnail.addEventListener("click", function() {
+                        mainImage.src = thumbnail.src;
+                    });
+                });
+            });
+        </script>
+    </div>
+
+    <!-- <div class="main">
+
+        <script>
+            // var getid = new URLSearchParams(window.location.search).get("id")
+            
+            var urlparms = new URLSearchParams(window.location.search)
+
+            var getid = urlparms.get('id')
+
+
+            // var card  = cards.find(c => c.id == getid )
+
+
+          
+            var card  = cards.find( function(c)
+            {
+                return c.id == getid
+            } )
+
+
+
+            if(card)
+            {
+                document.write(`
+                <div class="container">
+                    <div class="row">
+                        <div class="img-area">
+                            <img src="assets/img/detail/${card.img}" id="mainImage" height="400" alt="">
+            
+                            <div>
+                                <img src="assets/img/detail/${card.img1}" width="100" class="thumbnail" alt="">
+                                <img src="assets/img/detail/${card.img2}" width="100" class="thumbnail" alt="">
+                                <img src="assets/img/detail/${card.img3}" width="100" class="thumbnail" alt="">
+                            </div>
+                        </div>
+                        <div class="content-area">
+                            <h1>${card.name}</h1>
+                            <h2>Discription ${card.discription} </h2>
+                            <h2>Price ${card.price}</h2>
+                        </div>
+                    </div>
+                </div>
+                
+
+                
+                `)
+            }
+            else
+            {
+                document.write("<h1> Card Not Found !   </h1>")
+            }
+    
+
+        </script>
+                    <script>
+        
+                        var mainImage = document.getElementById("mainImage");
+                        var thumbnails =  document.querySelectorAll(".thumbnail");
+                
+                
+                        thumbnails.forEach(thumbnail =>{
+                
+                            thumbnail.addEventListener("click",function()
+                            {
+                
+                                mainImage.src = thumbnail.src
+                            })
+                
+                        })
+                
+                    </script>
+    </div> -->
+
+</body>
+</html>

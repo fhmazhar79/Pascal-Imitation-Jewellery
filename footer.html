@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+#newsletter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-image: url(Img/banner/b14.png);
+  background-repeat: no-repeat;
+  background-position: 20% 30%;
+  background-color: #041e42;
+}
+#newsletter h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+#newsletter p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #818ea0;
+}
+#newsletter p span {
+  color: #ffbd27;
+}
+#newsletter input {
+  height: 3.125rem;
+  padding: 0 1.25rem;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#newsletter button {
+  /* font-size: 14px; */
+  /* font-weight: 600; */
+  padding: 15px 30px;
+  color: #fff;
+  background-color: #088178;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  white-space: nowrap;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+#newsletter .form {
+  display: flex;
+  width: 40%;
+}
+footer.section-p1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+footer .col {
+  flex: 1;
+  min-width: 200px;
+}
+
+footer .logo {
+  margin-bottom: 30px;
+}
+
+footer h4 {
+  font-size: 20px;
+  padding-bottom: 20px;
+  font-weight: 700;
+}
+
+footer p {
+  font-weight: 600;
+  font-size: 15px;
+  margin: 0 0 8px 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: #222;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+footer .follow {
+  margin-top: 20px;
+}
+
+footer .follow i {
+  color: #465b52;
+  padding-right: 4px;
+  cursor: pointer;
+}
+
+footer .install .row img {
+  border: 1px solid #088178;
+  border-radius: 6px;
+}
+
+footer .install img {
+  margin: 10px 0 15px 0;
+}
+
+footer .follow i:hover {
+  /* padding-right: 2rem; */
+  color: #088178;
+}
+footer a:hover {
+  padding-right: 6rem;
+  color: #088178;
+}
+footer .copyright {
+  width: 100%;
+  text-align: center;
+}
+    </style>
+</head>
+<body>
+    
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+          <h4>Sign Up For Newsletter</h4>
+          <p>
+            Get E-mail updates about our latest shop and
+            <span>special offers.</span>
+          </p>
+        </div>
+        <div class="form">
+          <input type="text" placeholder="Your Email address" />
+          <button class="normal">Sign Up</button>
+        </div>
+      </section>
+  
+     
+      <footer class="section-p1">
+        <div class="col">
+          <img class="logo" src="Img/logo.png" alt="" />
+          <h4>Contact</h4>
+          <p><strong>Address:</strong> E-328 Kausar Town Malir, Karachi</p>
+          <p><strong>Phone:</strong> +92-3412705043</p>
+          <p><strong>Hour:</strong> All Day Open 24/7</p>
+          <div class="follow">
+            <h4>Follow Us</h4>
+            <div class="icon">
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-github"></i>
+              <i class="fab fa-linkedin"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <h4>About</h4>
+          <i class="fas fa-arrow-right"></i><a href="#">About Us</a>
+          <br>
+          <br>
+          <i class="fas fa-arrow-right"></i><a href="#">Delivery Information</a>
+          <br>
+          <br>
+          <i class="fas fa-arrow-right"></i><a href="#">Privacy Policy</a>
+          <br>
+          <br>
+          <i class="fas fa-arrow-right"></i><a href="#">Terms and Condition</a>
+          <br>
+          <br>
+          <i class="fas fa-arrow-right"></i><a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+          <h4>My Account</h4>
+          <i class="fas fa-arrow-right"></i><a href="#">Sign In</a>
+          <br>
+          <br>
+          <i class="fas fa-arrow-right"></i><a href="#">View Cart</a>
+          <br>
+          <br>
+          <i class="fas fa-arrow-right"></i><a href="#">My Wishlist</a>
+          <br>
+          <br>
+          <i class="fas fa-arrow-right"></i><a href="#">Track My Order</a>
+          <br>
+          <br>
+          <i class="fas fa-arrow-right"></i><a href="#">For Help</a>
+        </div>
+        <div class="col install">
+          <h4>Install App</h4>
+          <p>From App Store or Google Play</p>
+          <div class="row-list">
+            <img src="assets/img/footer/appstore.jpeg" alt="" />
+            <img src="assets/img/footer/playstore.jpeg" alt="" />
+          </div>
+          <p>Secured Payment Gateways</p>
+          <img src="assets/img/footer/cards.jpeg" alt="" />
+        </div>
+        <div class="copyright">
+          <p>"Designed by Mr. Raza | Powered by Mini Solution"</p>
+        </div>
+      </footer>
+
+</body>
+</html>

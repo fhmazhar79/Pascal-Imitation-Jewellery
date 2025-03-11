@@ -1,0 +1,91 @@
+
+/* feedback Button  */
+
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #7474745c;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.modal-content {
+    background-color: #fff7ef;
+    padding: 20px;
+    border-radius: 12px;
+    width: 1000px;
+    position: relative;
+    text-align: left; 
+    color: #8f7355;
+}
+
+.modal-content h2 {
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #967c60;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 99%;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 11px;
+}
+
+textarea {
+    height: 80px;
+}
+
+#feedback {
+    height: 190px;
+}
+.submit-btn {
+    background-color: #b99b7b;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 12px;
+    font-size: 19px;
+    cursor: pointer;  
+}
+
+.submit-btn:hover {
+    background-color: #967c60;
+}
+
+/* border */
+.border-bottom {
+    border-bottom-left-radius: 0px;
+}
+.border-bottom1 {
+    border:solid 5px #b99b7b;
+    border-radius: 100px;
+    border-top-right-radius: 0px;
+    height: 460px;
+    width: 380px;
+
+}
